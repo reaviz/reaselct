@@ -1,2 +1,2 @@
 # reaselect
-📝  Select Component for React
+reaselect is a select component for ReactJS.
