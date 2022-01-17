@@ -1,6 +1,3 @@
-# reaselct
- is a select component for ReactJS.
-
 <p align="center">
   <h1>reaselct</h1>
   <br />
