@@ -6,57 +6,79 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 ## Installing
 
-You can install REASELECT with [NPM](https://www.npmjs.com/package/reaselect) or Yarn.
+You can install reaselct with [NPM](https://www.npmjs.com/package/reaselct) or Yarn.
 
-- NPM: `npm install reaselect --save`
-- YARN: `yarn add reaselect`
+- NPM: `npm install reaselct --save`
+- YARN: `yarn add reaselct`
 
 ## Configuration
-REASELECT uses [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+reaselct uses [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
 to configure the colors and styles of the library. Below are the variables
 that we use.
 
-- `--font-family`
-- `--color-input;`
-- `--color-input-placeholder`
-- `--color-on-input;`
-- `--color-input-error`
-- `--color-tag-border;`
-- `--color-button;`
-- `--color-on-button;`
-- `--color-disabled;`
-- `--color-menu-border;`
-- `--color-menu;`
-- `--color-menu-group;`
-- `--color-on-menu-item;`
-- `--color-menu-item-active`
-- `--color-menu-item-selected;`
-
-You should include these variables in your CSS file
+You should include these variables in your CSS file or
 on a container element such as the body like:
 
 ```html
 <style>
   body {
-  --font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --color-input: white;
+    --color-on-input: rgb(51, 51, 51);
+    --color-input-placeholder: rgb(145, 145, 145);
+    --color-input-border: rgb(204, 204, 204);
+    --color-input-disabled: rgb(145, 145, 145);
 
-  --color-input: white;
-  --color-input-placeholder: grey;
-  --color-on-input: black;
-  --color-input-error: rgba(255, 0, 0, 0.5);
+    --color-input-error: rgba(255, 0, 0, 0.5);
+    --color-input-icon: rgb(145, 145, 145);
 
-  --color-tag-border: blue;
+    --color-tag: rgb(230, 230, 230);
+    --color-tag-icon: rgb(145, 145, 145);
+    --color-tag-border: transparent;
+    --color-on-tag: rgb(51, 51, 51);
 
-  --color-button: white;
-  --color-on-button: black;
-  --color-disabled: grey;
+    --color-menu-border: rgb(204, 204, 204);
+    --color-menu: white;
+    --color-menu-group: grey;
+    --color-on-menu-item: rgb(51, 51, 51);
 
-  --color-menu-border: grey;
-  --color-menu: white;
-  --color-menu-group: grey;
-  --color-on-menu-item: black;
-  --color-menu-item-active: blue;
-  --color-menu-item-selected: blue;
+    --color-menu-item-active: #DEEBFF;
+    --color-on-menu-item-active: rgb(51, 51, 51);
+
+    --color-menu-item-selected: #2684FF;
+    --color-on-menu-item-selected: white;
+  }
+</style>
+```
+
+You can make the select use a dark theme by changing the variables to:
+
+```html
+<style>
+  body {
+    --color-input: #202124;
+    --color-on-input: #bdc1c6;
+    --color-input-placeholder: rgb(145, 145, 145);
+    --color-input-border: #3c4043;
+    --color-input-disabled: rgb(145, 145, 145);
+
+    --color-input-error: rgba(255, 0, 0, 0.5);
+    --color-input-icon: #757b80;
+
+    --color-tag: #303134;
+    --color-tag-icon: #757b80;
+    --color-tag-border: transparent;
+    --color-on-tag: #bdc1c6;
+
+    --color-menu-border: #3c4043;
+    --color-menu: #202124;
+    --color-menu-group: grey;
+    --color-on-menu-item: #bdc1c6;
+
+    --color-menu-item-active: #303134;
+    --color-on-menu-item-active: #bdc1c6;
+
+    --color-menu-item-selected: #2684FF;
+    --color-on-menu-item-selected: #bdc1c6;
   }
 </style>
 ```

@@ -1,5 +1,5 @@
-# REASELECT
-reaselect is a select component for ReactJS.
+# reaselct
+reaselct is a select component for ReactJS.
 
 ## 🚀 Quick Links
 - [Docs and Demos](https://master--61dee6b62e6b2c004af20119.chromatic.com)
@@ -11,19 +11,20 @@ reaselect is a select component for ReactJS.
 - Async
 - Groups
 - Tags
+- Light and Dark Theme
 
 ## 📦 Usage
 Install the package via NPM:
 
 ```
-npm i reaselect --save
+npm i reaselct --save
 ```
 
 then use it like:
 
 ```tsx
 import React, { FC, useState } from 'react';
-import { Tooltip } from 'realayers';
+import { Select } from 'reaselct';
 
 const MyComponent: FC = () => {
   const [value, setValue] = useState<string | null>(null);
@@ -42,7 +43,7 @@ const MyComponent: FC = () => {
 ```
 
 ## 🔭 Development
-If you want to run `reaselect` locally, its super easy!
+If you want to run `reaselct` locally, its super easy!
 
 - Clone the repo
 - `yarn install`

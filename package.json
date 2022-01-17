@@ -1,5 +1,5 @@
 {
-  "name": "reaselect",
+  "name": "reaselct",
   "version": "1.0.0",
   "description": "Select Component for React",
   "scripts": {
@@ -20,7 +20,7 @@
   "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reaselect/realayers.git"
+    "url": "git+https://github.com/reaviz/reaselct.git"
   },
   "files": [
     "dist"
@@ -32,9 +32,9 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/reaviz/reaselect/issues"
+    "url": "https://github.com/reaviz/reaselct/issues"
   },
-  "homepage": "https://github.com/reaviz/reaselect#readme",
+  "homepage": "https://github.com/reaviz/reaselct#readme",
   "dependencies": {
     "classnames": "^2.3.1",
     "ellipsize": "^0.2.0",
