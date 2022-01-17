@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Getting Started" />
+
+# Getting Started
+
+## Installing
+
+You can install REASELECT with [NPM](https://www.npmjs.com/package/reaselect) or Yarn.
+
+- NPM: `npm install reaselect --save`
+- YARN: `yarn add reaselect`
+
+## Configuration
+REASELECT uses [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+to configure the colors and styles of the library. Below are the variables
+that we use.
+
+- `--font-family`
+- `--color-input;`
+- `--color-input-placeholder`
+- `--color-on-input;`
+- `--color-input-error`
+- `--color-tag-border;`
+- `--color-button;`
+- `--color-on-button;`
+- `--color-disabled;`
+- `--color-menu-border;`
+- `--color-menu;`
+- `--color-menu-group;`
+- `--color-on-menu-item;`
+- `--color-menu-item-active`
+- `--color-menu-item-selected;`
+
+You should include these variables in your CSS file
+on a container element such as the body like:
+
+```html
+<style>
+  body {
+  --font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+  --color-input: white;
+  --color-input-placeholder: grey;
+  --color-on-input: black;
+  --color-input-error: rgba(255, 0, 0, 0.5);
+
+  --color-tag-border: blue;
+
+  --color-button: white;
+  --color-on-button: black;
+  --color-disabled: grey;
+
+  --color-menu-border: grey;
+  --color-menu: white;
+  --color-menu-group: grey;
+  --color-on-menu-item: black;
+  --color-menu-item-active: blue;
+  --color-menu-item-selected: blue;
+  }
+</style>
+```

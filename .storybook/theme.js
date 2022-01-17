@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming/create';
 
 export default create({
-  base: 'dark',
-  brandTitle: 'reaselect'
+  base: 'light',
+  brandTitle: 'REASELECT'
 });

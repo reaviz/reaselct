@@ -1,13 +1,16 @@
 {
   "name": "reaselect",
-  "version": "2.4.6",
+  "version": "1.0.0",
   "description": "Select Component for React",
   "scripts": {
     "build": "rollup -c",
     "prettier": "prettier --loglevel warn --write 'src/**/*.{ts,tsx,js,jsx}'",
     "start": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token 15klwb1zctw --auto-accept-changes"
+    "lint": "eslint --ext js,ts,tsx",
+    "lint:fix": "eslint --ext js,ts,tsx --fix src",
+    "lint:prettier": "prettier --loglevel warn --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "chromatic": "chromatic --project-token=3eedbd9f2b67 --exit-zero-on-changes"
   },
   "source": "src/index.ts",
   "main": "dist/index.cjs.js",
@@ -34,24 +37,38 @@
   "homepage": "https://github.com/reaviz/reaselect#readme",
   "dependencies": {
     "classnames": "^2.3.1",
-    "rdk": "^5.1.6"
+    "ellipsize": "^0.2.0",
+    "framer-motion": "^4.1.17",
+    "lodash": "^4.17.21",
+    "rdk": "^5.1.6",
+    "react-fast-compare": "^3.2.0",
+    "react-highlight-words": "^0.17.0",
+    "react-input-autosize": "^3.0.0",
+    "react-use-fuzzy": "^1.0.4"
   },
   "peerDependencies": {
-    "framer-motion": "^3.0.0",
     "react": ">=16",
     "react-dom": ">=16"
   },
   "devDependencies": {
-    "@storybook/addon-storysource": "^6.4.9",
-    "@storybook/addon-essentials": "6.4.9",
-    "@storybook/addons": "6.4.9",
-    "@storybook/react": "6.4.9",
-    "@storybook/theming": "6.4.9",
+    "@storybook/addon-essentials": "6.4.12",
+    "@storybook/addon-storysource": "^6.4.12",
+    "@storybook/addons": "6.4.12",
+    "@storybook/react": "6.4.12",
+    "@storybook/theming": "6.4.12",
     "@types/classnames": "^2.3.1",
+    "@types/lodash": "^4.14.178",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
     "autoprefixer": "^9",
-    "chromatic": "^5.9.2",
+    "chromatic": "^6.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.5.5",
     "framer-motion": "^4.1.17",
     "husky": "^4.2.5",
     "lint-staged": "^10.5.4",
@@ -69,6 +86,7 @@
     "rollup-plugin-sourcemaps": "0.6.3",
     "rollup-plugin-typescript2": "0.26.0",
     "storybook-css-modules-preset": "^1.1.1",
+    "storybook-dark-mode": "^1.0.8",
     "typescript": "^4.1.3"
   },
   "lint-staged": {
