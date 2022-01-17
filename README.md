@@ -1,6 +1,5 @@
 <p align="center">
   <h1>reaselct</h1>
-  <br />
   Select Component for React
   <br /><br />
   <a href="https://github.com/reaviz/reaselct/workflows/build/">
