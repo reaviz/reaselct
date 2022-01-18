@@ -11,7 +11,7 @@ export const useWidth = (
     if (ref?.current) {
       const { width } = ref.current.getBoundingClientRect();
       if (width !== menuWidth) {
-        setMenuWidth(width - 2);
+        setMenuWidth(width);
         return true;
       }
     }
