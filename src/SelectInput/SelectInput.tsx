@@ -79,6 +79,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   filterable,
   id,
   name,
+  className,
   inputText,
   required,
   loading,
@@ -295,7 +296,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   return (
     <div
       ref={containerRef}
-      className={classNames(css.container, {
+      className={classNames(css.container, className, {
         [css.disabled]: disabled,
         [css.unfilterable]: !filterable,
         [css.error]: error,
