@@ -57,7 +57,7 @@ export interface SelectProps {
   menu?: ReactElement<SelectMenuProps, typeof SelectMenu>;
 }
 
-export const Select: FC<SelectProps> = ({
+export const Select: FC<Partial<SelectProps>> = ({
   id,
   name,
   autoFocus,
