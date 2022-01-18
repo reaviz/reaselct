@@ -44,6 +44,26 @@ export const Basic = () => {
   );
 };
 
+export const Fonts = () => {
+  const [value, setValue] = useState<string | null>(null);
+  return (
+    <div style={{ width: 300, fontFamily: `"Electrolux Sans", system-ui, -apple-system,BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,Noto Color Emoji` }}>
+      <Select
+        placeholder="Select a category..."
+        value={value}
+        onChange={(v) => {
+          setValue(v);
+          console.log('onChange', v);
+        }}
+      >
+        <SelectOption value="facebook">facebook</SelectOption>
+        <SelectOption value="twitter">twitter</SelectOption>
+        <SelectOption value="twitch">twitch</SelectOption>
+      </Select>
+    </div>
+  );
+};
+
 export const NoOptions = () => (
   <div style={{ width: 300 }}>
     <Select placeholder="Select a category..." />
