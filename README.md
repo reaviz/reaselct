@@ -30,14 +30,14 @@
 
 ## 🚀 Quick Links
 - [Docs and Demos](https://master--61dee6b62e6b2c004af20119.chromatic.com)
+- [CodeSandbox](https://codesandbox.io/s/reaselct-6gv07)
 
 ## 🪄 Features
 - Single Select
 - Multi Select
-- Filtering
-- Async
-- Groups
-- Tags
+- Filtering with Fuzzy Search
+- Async Support
+- Groups Support
 - Light and Dark Theme
 
 ## 📦 Usage
@@ -51,7 +51,7 @@ then use it like:
 
 ```tsx
 import React, { FC, useState } from 'react';
-import { Select } from 'reaselct';
+import { Select, SelectOption } from 'reaselct';
 
 const MyComponent: FC = () => {
   const [value, setValue] = useState<string | null>(null);
