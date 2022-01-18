@@ -3,9 +3,9 @@
   margin-bottom: 2px;
   border: solid 1px transparent;
   cursor: pointer;
-  background: var(--color-tag);
-  border: solid 1px var(--color-tag-border);
-  color: var(--color-on-tag);
+  background: var(--color-select-chip);
+  border: solid 1px var(--color-select-chip-border);
+  color: var(--color-on-select-chip);
   display: flex;
   padding: 2px 4px;
   margin-right: 4px;
@@ -38,6 +38,6 @@
     width: 12px;
     vertical-align: baseline;
     pointer-events: none;
-    fill: var(--color-tag-icon);
+    fill: var(--color-select-chip-icon);
   }
 }
