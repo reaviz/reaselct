@@ -302,8 +302,9 @@ export const Select: FC<Partial<SelectProps>> = ({
         const singleOption = option as SelectOptionProps;
         const hasOption = options.find((o) => o.value === singleOption?.value);
         newValue = singleOption?.value;
+        const hasValue = newValue !== undefined && newValue !== null;
 
-        if (createable && !hasOption && newValue) {
+        if (createable && !hasOption && hasValue) {
           onOptionsChange?.([...options, singleOption]);
         }
 
