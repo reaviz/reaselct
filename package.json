@@ -1,6 +1,6 @@
 {
   "name": "reaselct",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Select Component for React",
   "scripts": {
     "build": "rollup -c",
