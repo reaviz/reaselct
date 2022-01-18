@@ -2,8 +2,7 @@
   background: var(--color-select-menu);
   text-align: center;
   will-change: transform, opacity;
-  border-radius: 0 0 4px 4px;
-  border: none;
+  border-radius: 0 0 var(--select-border-radius) var(--select-border-radius);
   min-width: 112px;
   max-height: 300px;
   overflow-y: auto;

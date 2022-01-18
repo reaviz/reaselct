@@ -14,6 +14,7 @@ export interface SelectMenuProps {
   disabled?: boolean;
   groups?: GroupOptions;
   createable?: boolean;
+  className?: string;
   multiple?: boolean;
   index: number;
   inputSearchText: string;
@@ -29,6 +30,7 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
   selectedOption,
   options,
   loading,
+  className,
   index,
   filterable,
   groups,
@@ -82,7 +84,7 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
   return (
     <motion.div
       style={style}
-      className={css.menu}
+      className={classNames(css.menu, className)}
       initial={{
         opacity: 0,
         y: -20,

@@ -26,6 +26,7 @@ export interface SelectInputProps {
   options: SelectOptionProps[];
   disabled?: boolean;
   menuOpen?: boolean;
+  fontSize?: string | number;
   inputText: string;
   selectedOption?: SelectOptionProps | SelectOptionProps[];
   autoFocus?: boolean;
@@ -77,6 +78,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   disabled,
   placeholder,
   filterable,
+  fontSize,
   id,
   name,
   className,
@@ -311,7 +313,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
         <AutosizeInput
           inputRef={(el) => (inputRef.current = el)}
           id={id}
-          style={{ fontSize: 14 }}
+          style={{ fontSize }}
           name={name}
           disabled={disabled}
           required={required}
@@ -370,6 +372,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
 };
 
 SelectInput.defaultProps = {
+  fontSize: 13,
   expandIcon: <DownArrowIcon />,
   closeIcon: <CloseIcon />,
   refreshIcon: <RefreshIcon />,
