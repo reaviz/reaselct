@@ -1,4 +1,4 @@
-<p align="center">
+<div align="center">
   <h1>reaselct</h1>
   Select Component for React
   <br /><br />
@@ -24,7 +24,7 @@
   <a href="https://discord.gg/tt8wGExq35">
     <img src="https://img.shields.io/discord/773948315037073409?label=discord" />
   </a>
-</p>
+</div>
 
 ---
 
