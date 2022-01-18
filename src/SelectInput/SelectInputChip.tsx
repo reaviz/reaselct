@@ -3,10 +3,12 @@ import { SelectOptionProps } from '../SelectOption';
 import ellipsize from 'ellipsize';
 import { CloseIcon } from '../icons/CloseIcon';
 import css from './SelectInputChip.module.css';
+import classNames from 'classnames';
 
 export interface SelectInputChipProps {
   option: SelectOptionProps;
   maxLength?: number;
+  className?: string;
   disabled?: boolean;
   clearable?: boolean;
   closeIcon?: React.ReactNode;
@@ -21,6 +23,7 @@ export const SelectInputChip: FC<Partial<SelectInputChipProps>> = ({
   option,
   disabled,
   clearable,
+  className,
   maxLength,
   closeIcon,
   onTagKeyDown,
@@ -32,7 +35,7 @@ export const SelectInputChip: FC<Partial<SelectInputChipProps>> = ({
 
   return (
     <span
-      className={css.tag}
+      className={classNames(css.tag, className)}
       title={origLabel as string}
       tabIndex={-1}
       onKeyDown={(event) => onTagKeyDown(event, option)}
