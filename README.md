@@ -29,8 +29,9 @@
 ---
 
 ## 🚀 Quick Links
-- [Docs and Demos](https://master--61dee6b62e6b2c004af20119.chromatic.com)
-- [CodeSandbox](https://codesandbox.io/s/reaselct-6gv07)
+- View the [Docs and Demos](https://master--61dee6b62e6b2c004af20119.chromatic.com)
+- Play with examples in [CodeSandbox](https://codesandbox.io/s/reaselct-6gv07)
+- Learn about updates from the [changelog](CHANGELOG.md)
 
 ## 🪄 Features
 - Single Select
