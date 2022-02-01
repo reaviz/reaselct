@@ -99,9 +99,10 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
         },
       }}
       exit={{
-        y: -20,
+        y: -14,
         opacity: 0,
         pointerEvents: 'none',
+        transition: { duration: 0.3, ease: 'anticipate' },
       }}
     >
       <ul>
