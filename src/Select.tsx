@@ -6,14 +6,14 @@ import React, {
   useLayoutEffect,
   useMemo,
   useRef,
-  useState,
+  useState
 } from 'react';
 import {
   CloneElement,
   ConnectedOverlay,
   ConnectedOverlayContentRef,
   Placement,
-  useId,
+  useId
 } from 'rdk';
 import { SelectInput, SelectInputProps, SelectInputRef } from './SelectInput';
 import { SelectMenu, SelectMenuProps } from './SelectMenu';
@@ -86,7 +86,7 @@ export const Select: FC<Partial<SelectProps>> = ({
   onInputKeydown,
   onInputKeyUp,
   onOptionsChange,
-  onInputChange,
+  onInputChange
 }) => {
   const overlayRef = useRef<ConnectedOverlayContentRef | null>(null);
   const inputRef = useRef<SelectInputRef | null>(null);
@@ -114,7 +114,7 @@ export const Select: FC<Partial<SelectProps>> = ({
   const { result, keyword, search, resetSearch } = useFuzzy<SelectOptionProps>(
     options,
     {
-      keys: ['children', 'group'],
+      keys: ['children', 'group']
     }
   );
 
@@ -123,14 +123,14 @@ export const Select: FC<Partial<SelectProps>> = ({
   const selectedOption: SelectValue = useMemo(() => {
     if (multiple) {
       if (internalValue || internalValue === '') {
-        return options.filter((o) =>
+        return options.filter(o =>
           (internalValue as string[]).includes(o.value)
         );
       }
 
       return [];
     } else if (internalValue || internalValue === '') {
-      return options.find((o) => o.value === internalValue);
+      return options.find(o => o.value === internalValue);
     }
 
     return null;
@@ -154,11 +154,11 @@ export const Select: FC<Partial<SelectProps>> = ({
         for (const v of internalValue) {
           const newOptions = [];
 
-          const has = options.find((o) => o.value === v);
+          const has = options.find(o => o.value === v);
           if (!has) {
             newOptions.push({
               children: v,
-              value: v,
+              value: v
             });
           }
 
@@ -169,14 +169,14 @@ export const Select: FC<Partial<SelectProps>> = ({
           }
         }
       } else {
-        const has = options.find((o) => o.value === internalValue);
+        const has = options.find(o => o.value === internalValue);
         if (!has) {
           const updatedOptions = [
             ...options,
             {
               children: internalValue,
-              value: internalValue,
-            },
+              value: internalValue
+            }
           ];
 
           onOptionsChange?.(updatedOptions);
@@ -259,11 +259,11 @@ export const Select: FC<Partial<SelectProps>> = ({
         }
 
         for (const next of selections) {
-          const hasOption = options.find((o) => o.value === next.value);
+          const hasOption = options.find(o => o.value === next.value);
           const has = (internalValue || []).includes(next.value);
           if (has) {
             newSelectedOptions = newSelectedOptions.filter(
-              (o) => o.value !== next.value
+              o => o.value !== next.value
             );
           } else {
             newSelectedOptions = [...newSelectedOptions, next];
@@ -276,9 +276,9 @@ export const Select: FC<Partial<SelectProps>> = ({
       }
 
       return {
-        newValue: newSelectedOptions.map((o) => o.value),
+        newValue: newSelectedOptions.map(o => o.value),
         newSelectedOptions,
-        newOptions,
+        newOptions
       };
     },
     [createable, internalValue, options, selectedOption]
@@ -300,7 +300,7 @@ export const Select: FC<Partial<SelectProps>> = ({
         }
       } else {
         const singleOption = option as SelectOptionProps;
-        const hasOption = options.find((o) => o.value === singleOption?.value);
+        const hasOption = options.find(o => o.value === singleOption?.value);
         newValue = singleOption?.value;
         const hasValue = newValue !== undefined && newValue !== null;
 
@@ -325,7 +325,7 @@ export const Select: FC<Partial<SelectProps>> = ({
       onOptionsChange,
       options,
       resetInput,
-      toggleSelectedMultiOption,
+      toggleSelectedMultiOption
     ]
   );
 
@@ -341,7 +341,7 @@ export const Select: FC<Partial<SelectProps>> = ({
       if (index > -1 || createable) {
         const newSelection = result[index]?.value || {
           value: inputValue,
-          children: inputValue,
+          children: inputValue
         };
 
         toggleSelectedOption(newSelection);
@@ -376,7 +376,7 @@ export const Select: FC<Partial<SelectProps>> = ({
       if (menuDisabled && createable && inputValue) {
         const newSelection = {
           value: inputValue,
-          children: inputValue,
+          children: inputValue
         };
 
         toggleSelectedOption(newSelection);
@@ -405,7 +405,7 @@ export const Select: FC<Partial<SelectProps>> = ({
     if (createable && inputValue) {
       const newSelection = {
         value: inputValue,
-        children: inputValue,
+        children: inputValue
       };
 
       toggleSelectedOption(newSelection);

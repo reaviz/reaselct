@@ -20,18 +20,18 @@ export function getGroups(options: SelectOptionProps[]): GroupOptions {
     return {
       groups: [],
       itemsCount: 0,
-      hasGroups: false,
+      hasGroups: false
     };
   }
 
-  const groupsMap = groupBy(options, (t) => t.group);
+  const groupsMap = groupBy(options, t => t.group);
   const groupNames = Object.keys(groupsMap);
 
   if (groupNames.length === 1 && groupNames[0] === 'undefined') {
     return {
       groups: [],
       itemsCount: options.length,
-      hasGroups: false,
+      hasGroups: false
     };
   }
 
@@ -40,7 +40,7 @@ export function getGroups(options: SelectOptionProps[]): GroupOptions {
     offset: 0,
     index,
     items: value,
-    name: key,
+    name: key
   }));
 
   for (const group of groups) {
@@ -55,8 +55,8 @@ export function getGroups(options: SelectOptionProps[]): GroupOptions {
     groups,
     itemsCount:
       groups?.length !== 0
-        ? sumBy(groups, (g) => g.items.length)
+        ? sumBy(groups, g => g.items.length)
         : options.length,
-    hasGroups: groups?.length !== 0,
+    hasGroups: groups?.length !== 0
   };
 }

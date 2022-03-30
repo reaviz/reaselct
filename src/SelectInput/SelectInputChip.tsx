@@ -27,7 +27,7 @@ export const SelectInputChip: FC<Partial<SelectInputChipProps>> = ({
   maxLength,
   closeIcon,
   onTagKeyDown,
-  onSelectedChange,
+  onSelectedChange
 }) => {
   const origLabel = option.inputLabel || option.children;
   const label =
@@ -35,10 +35,10 @@ export const SelectInputChip: FC<Partial<SelectInputChipProps>> = ({
 
   return (
     <span
-      className={classNames(css.tag, className)}
+      className={classNames(css.tag, className, 'reaselct-input-chip')}
       title={origLabel as string}
       tabIndex={-1}
-      onKeyDown={(event) => onTagKeyDown(event, option)}
+      onKeyDown={event => onTagKeyDown(event, option)}
     >
       {label}
       {!disabled && clearable && (
@@ -52,5 +52,5 @@ export const SelectInputChip: FC<Partial<SelectInputChipProps>> = ({
 
 SelectInputChip.defaultProps = {
   closeIcon: <CloseIcon />,
-  maxLength: 20,
+  maxLength: 20
 };

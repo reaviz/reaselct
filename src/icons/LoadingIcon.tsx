@@ -10,7 +10,7 @@ export const LoadingIcon: FC = () => (
         key={i}
         animate={{
           opacity: [0, 1, 0],
-          scale: [1, 2, 2, 1, 1],
+          scale: [1, 2, 2, 1, 1]
         }}
         transition={{
           duration: SPEED * 4,
@@ -18,7 +18,7 @@ export const LoadingIcon: FC = () => (
           times: [0, 0.2, 0.5, 0.8, 1],
           loop: Infinity,
           repeatDelay: SPEED,
-          delay: SPEED * i,
+          delay: SPEED * i
         }}
       />
     ))}

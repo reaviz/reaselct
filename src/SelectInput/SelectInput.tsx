@@ -6,7 +6,7 @@ import React, {
   useCallback,
   useImperativeHandle,
   useMemo,
-  useRef,
+  useRef
 } from 'react';
 import classNames from 'classnames';
 import { SelectOptionProps, SelectValue } from '../SelectOption';
@@ -103,7 +103,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   onFocus,
   onBlur,
   onRefresh,
-  chip,
+  chip
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<any | null>(null);
@@ -118,7 +118,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   useImperativeHandle(reference, () => ({
     containerRef,
     inputRef,
-    focus: () => focusInput(),
+    focus: () => focusInput()
   }));
 
   const inputTextValue = useMemo(() => {
@@ -259,8 +259,8 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
       const multipleOptions = selectedOption as SelectOptionProps[];
       if (multipleOptions?.length) {
         return (
-          <div className={css.prefix}>
-            {multipleOptions.map((option) => (
+          <div className={classNames(css.prefix, 'reaselct-input-value')}>
+            {multipleOptions.map(option => (
               <CloneElement<SelectInputChipProps>
                 element={chip}
                 key={option.value}
@@ -278,7 +278,11 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
     } else {
       const singleOption = selectedOption as SelectOptionProps;
       if (singleOption?.inputLabel && !inputText) {
-        return <div className={css.prefix}>{singleOption?.inputLabel}</div>;
+        return (
+          <div className={classNames(css.prefix, 'reaselct-input-value')}>
+            {singleOption?.inputLabel}
+          </div>
+        );
       }
     }
 
@@ -292,26 +296,26 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
     multiple,
     onSelectedChange,
     onTagKeyDown,
-    selectedOption,
+    selectedOption
   ]);
 
   return (
     <div
       ref={containerRef}
-      className={classNames(css.container, className, {
+      className={classNames(css.container, 'reaselct-input', className, {
         [css.disabled]: disabled,
         [css.unfilterable]: !filterable,
         [css.error]: error,
         [css.single]: !multiple,
         [css.multiple]: multiple,
-        [css.open]: menuOpen,
+        [css.open]: menuOpen
       })}
       onClick={onContainerClick}
     >
       <div className={css.inputContainer} onClick={onInputFocus}>
         {renderPrefix()}
         <AutosizeInput
-          inputRef={(el) => (inputRef.current = el)}
+          inputRef={el => (inputRef.current = el)}
           id={id}
           style={{ fontSize }}
           name={name}
@@ -319,7 +323,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
           required={required}
           autoFocus={autoFocus}
           placeholder={placeholderText}
-          inputClassName={css.input}
+          inputClassName={classNames(css.input, 'reaselct-input-input')}
           value={inputTextValue}
           autoCorrect="off"
           spellCheck="false"
@@ -337,7 +341,11 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
             type="button"
             title="Refresh Options"
             disabled={disabled}
-            className={classNames(css.refresh, css.btn)}
+            className={classNames(
+              css.refresh,
+              css.btn,
+              'reaselct-input-refresh'
+            )}
             onClick={onRefresh}
           >
             {refreshIcon}
@@ -349,7 +357,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
             type="button"
             title="Clear selection"
             disabled={disabled}
-            className={classNames(css.close, css.btn)}
+            className={classNames(css.close, css.btn, 'reaselct-input-clear')}
             onClick={removeAllValues}
           >
             {closeIcon}
@@ -360,7 +368,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
             type="button"
             title="Toggle options menu"
             disabled={disabled}
-            className={classNames(css.expand, css.btn)}
+            className={classNames(css.expand, css.btn, 'reaselct-input-toggle')}
             onClick={onExpandClick}
           >
             {expandIcon}
@@ -377,5 +385,5 @@ SelectInput.defaultProps = {
   closeIcon: <CloseIcon />,
   refreshIcon: <RefreshIcon />,
   loadingIcon: <LoadingIcon />,
-  chip: <SelectInputChip />,
+  chip: <SelectInputChip />
 };
