@@ -1,3 +1,7 @@
+# 2.0.0 - 4/4/22
+- [chore] upgrade react
+- [chore] upgrade framer-motion
+
 # 1.0.10 - 3/30/22
 - [feature] add global classnames to elements
 
