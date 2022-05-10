@@ -1,6 +1,6 @@
 {
   "name": "reaselct",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Select Component for React",
   "scripts": {
     "build": "rollup -c",
@@ -40,7 +40,7 @@
     "ellipsize": "^0.2.0",
     "framer-motion": "^6.2.8",
     "lodash": "^4.17.21",
-    "rdk": "^6.0.1",
+    "rdk": "^6.0.2",
     "react-fast-compare": "^3.2.0",
     "react-highlight-words": "^0.17.0",
     "react-input-autosize": "^3.0.0",
