@@ -40,6 +40,7 @@ export interface SelectProps {
   loading?: boolean;
   refreshable?: boolean;
   createable?: boolean;
+  children?: any;
   error?: boolean;
   menuPlacement?: Placement;
   menuDisabled?: boolean;

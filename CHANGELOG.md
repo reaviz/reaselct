@@ -1,3 +1,6 @@
+# 2.0.2 - 5/10/22
+- [fix] fix children missing in props
+
 # 2.0.1 - 4/6/22
 - [chore] bump rdk
 - [chore] fix framer-motion imports
