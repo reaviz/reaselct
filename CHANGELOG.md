@@ -1,3 +1,6 @@
+# 2.0.3 - 7/15/22
+- [fix] make select clear honor close prop
+
 # 2.0.2 - 5/10/22
 - [fix] fix children missing in props
 
