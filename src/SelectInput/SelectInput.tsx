@@ -28,6 +28,7 @@ export interface SelectInputProps {
   menuOpen?: boolean;
   fontSize?: string | number;
   inputText: string;
+  closeOnSelect?: boolean;
   selectedOption?: SelectOptionProps | SelectOptionProps[];
   autoFocus?: boolean;
   className?: string;
@@ -95,6 +96,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
   closeIcon,
   expandIcon,
   loadingIcon,
+  closeOnSelect,
   onSelectedChange,
   onKeyDown,
   onKeyUp,
@@ -135,9 +137,16 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
     return inputText;
   }, [hasValue, inputText, selectedOption]);
 
-  const removeAllValues = useCallback(() => {
-    onSelectedChange(null);
-  }, [onSelectedChange]);
+  const onClearValues = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      // Stop propogation to prevent closing the menu
+      if (closeOnSelect) {
+        event.stopPropagation();
+      }
+      onSelectedChange(null);
+    },
+    [onSelectedChange, closeOnSelect]
+  );
 
   const focusInput = useCallback(() => {
     const input = inputRef.current;
@@ -358,7 +367,7 @@ export const SelectInput: FC<Partial<SelectInputProps>> = ({
             title="Clear selection"
             disabled={disabled}
             className={classNames(css.close, css.btn, 'reaselct-input-clear')}
-            onClick={removeAllValues}
+            onClick={onClearValues}
           >
             {closeIcon}
           </button>

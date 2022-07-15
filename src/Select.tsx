@@ -62,24 +62,24 @@ export const Select: FC<Partial<SelectProps>> = ({
   id,
   name,
   autoFocus,
-  clearable = true,
-  filterable = true,
-  menuPlacement = 'bottom-start',
+  clearable,
+  filterable,
+  menuPlacement,
+  closeOnSelect,
+  menuDisabled,
+  refreshable,
   placeholder,
   disabled,
   createable,
-  closeOnSelect = true,
-  menuDisabled = false,
   loading,
   multiple,
   error,
-  refreshable = false,
   className,
   children,
   value,
   required,
-  input = <SelectInput />,
-  menu = <SelectMenu />,
+  input,
+  menu,
   onRefresh,
   onChange,
   onBlur: onInputBlur,
@@ -454,6 +454,7 @@ export const Select: FC<Partial<SelectProps>> = ({
         autoFocus={autoFocus}
         options={options}
         error={error}
+        closeOnSelect={closeOnSelect}
         inputText={keyword}
         multiple={multiple}
         createable={createable}
@@ -477,4 +478,15 @@ export const Select: FC<Partial<SelectProps>> = ({
       />
     </ConnectedOverlay>
   );
+};
+
+Select.defaultProps = {
+  clearable: true,
+  filterable: true,
+  menuPlacement: 'bottom-start',
+  closeOnSelect: true,
+  menuDisabled: false,
+  refreshable: false,
+  input: <SelectInput />,
+  menu: <SelectMenu />
 };
