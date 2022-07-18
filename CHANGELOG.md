@@ -1,7 +1,10 @@
-# 2.0.3 - 7/15/22
+# 2.0.5 - 7/18/22
+- [fix] Be able to select option with Return key #5
+
+# 2.0.4 - 7/15/22
 - [fix] make select clear honor close prop
 
-# 2.0.2 - 5/10/22
+# 2.0.2/3 - 5/10/22
 - [fix] fix children missing in props
 
 # 2.0.1 - 4/6/22
