@@ -1,3 +1,6 @@
+# 2.0.6 - 7/26/22
+- [fix] Fix for a createable value when Enter is pressed #6
+
 # 2.0.5 - 7/18/22
 - [fix] Be able to select option with Return key #5
 
