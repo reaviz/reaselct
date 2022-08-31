@@ -1,3 +1,6 @@
+# 2.0.7 - 7/26/22
+- [fix] Fix for click event bubbling and causing rdk to close things
+
 # 2.0.6 - 7/26/22
 - [fix] Fix for a createable value when Enter is pressed #6
 
