@@ -65,7 +65,10 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
             [css.active]: index === i + (group?.offset || 0),
             [css.diabled]: disabled || o.disabled
           })}
-          onClick={() => onSelectedChange(o)}
+          onClick={event => {
+            event.stopPropagation();
+            onSelectedChange(o);
+          }}
         >
           {o.menuLabel ? (
             o.menuLabel
@@ -109,12 +112,13 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
         {options?.length === 0 && createable && trimmedText && !loading && (
           <li
             className="reaselct-menu-create-option"
-            onClick={() =>
+            onClick={event => {
+              event.stopPropagation();
               onSelectedChange({
                 value: trimmedText.toLowerCase(),
                 children: trimmedText.toLowerCase()
-              })
-            }
+              });
+            }}
           >
             Create option &quot;{trimmedText.toLowerCase()}&quot;
           </li>
