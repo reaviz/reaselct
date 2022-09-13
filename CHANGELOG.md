@@ -1,3 +1,6 @@
+# 2.0.9 - 9/13/22
+- [fix] update rdk
+
 # 2.0.8 - 9/13/22
 - [fix] update rdk
 - [fix] cancel click event defaults
