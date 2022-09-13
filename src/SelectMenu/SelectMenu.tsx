@@ -66,6 +66,7 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
             [css.diabled]: disabled || o.disabled
           })}
           onClick={event => {
+            event.preventDefault();
             event.stopPropagation();
             onSelectedChange(o);
           }}
@@ -113,6 +114,7 @@ export const SelectMenu: FC<Partial<SelectMenuProps>> = ({
           <li
             className="reaselct-menu-create-option"
             onClick={event => {
+              event.preventDefault();
               event.stopPropagation();
               onSelectedChange({
                 value: trimmedText.toLowerCase(),
