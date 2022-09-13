@@ -1,3 +1,7 @@
+# 2.0.8 - 9/13/22
+- [fix] update rdk
+- [fix] cancel click event defaults
+
 # 2.0.7 - 7/26/22
 - [fix] Fix for click event bubbling and causing rdk to close things
 
