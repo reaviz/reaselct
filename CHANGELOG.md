@@ -1,3 +1,6 @@
+# 2.0.10 - 10/9/22
+- [fix] fix issue with creatable
+
 # 2.0.9 - 9/13/22
 - [fix] update rdk
 
