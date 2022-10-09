@@ -341,8 +341,9 @@ export const Select: FC<Partial<SelectProps>> = ({
 
       if (index > -1 || createable) {
         const newSelection = {
-          value: createable ? result[index]?.value : inputValue,
-          children: createable ? result[index]?.value : inputValue,
+          value: createable && result[index] ? result[index].value : inputValue,
+          children:
+            createable && result[index] ? result[index].value : inputValue
         };
 
         toggleSelectedOption(newSelection);
