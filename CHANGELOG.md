@@ -1,3 +1,7 @@
+# 2.1.0 - 11/21/22
+- [chore] upgrade rdk
+- [chore] upgrade framer-motion
+
 # 2.0.10 - 10/9/22
 - [fix] fix issue with creatable
 
