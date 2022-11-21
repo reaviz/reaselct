@@ -29,7 +29,7 @@
 ---
 
 ## 🚀 Quick Links
-- View the [Docs and Demos](https://master--61dee6b62e6b2c004af20119.chromatic.com)
+- View the [Docs and Demos](https://reaviz.github.io/reaselct/)
 - Play with examples in [CodeSandbox](https://codesandbox.io/s/reaselct-6gv07)
 - Learn about updates from the [changelog](CHANGELOG.md)
 
