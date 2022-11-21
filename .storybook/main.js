@@ -7,7 +7,7 @@ module.exports = {
     '@storybook/addon-essentials',
     'storybook-dark-mode'
   ],
-  webpackFinal: async (config, { configType }) => {
+  webpackFinal: async config => {
     config.module.rules.push({
       type: 'javascript/auto',
       test: /\.mjs$/,
