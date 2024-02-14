@@ -28,55 +28,8 @@
 
 ---
 
-## 🚀 Quick Links
-- View the [Docs and Demos](https://reaviz.github.io/reaselct/)
-- Play with examples in [CodeSandbox](https://codesandbox.io/s/reaselct-6gv07)
-- Learn about updates from the [changelog](CHANGELOG.md)
-
-## 🪄 Features
-- Single Select
-- Multi Select
-- Filtering with Fuzzy Search
-- Async Support
-- Groups Support
-- Light and Dark Theme
-
-## 📦 Usage
-Install the package via NPM:
-
-```
-npm i reaselct --save
-```
-
-then use it like:
-
-```tsx
-import React, { FC, useState } from 'react';
-import { Select, SelectOption } from 'reaselct';
-
-const MyComponent: FC = () => {
-  const [value, setValue] = useState<string | null>(null);
- 
- return (
-    <Select
-      value={value}
-      onChange={setValue}
-    >
-      <SelectOption value="facebook">facebook</SelectOption>
-      <SelectOption value="twitter">twitter</SelectOption>
-      <SelectOption value="twitch">twitch</SelectOption>
-    </Select>
-  );
-};
-```
-
-## 🔭 Development
-If you want to run `reaselct` locally, its super easy!
-
-- Clone the repo
-- `yarn install`
-- `yarn start`
-- Browser opens to Storybook page
+## Deprecated
+This package is deprecated and part of [https://reablocks.dev](https://reablocks.dev) now.
 
 ## ❤️ Contributors
 Thanks to all our contributors!
